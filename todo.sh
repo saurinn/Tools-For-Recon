@@ -44,8 +44,9 @@ select opcion in "${opciones[@]}"; do
 			echo 'export GOPATH=$HOME/go'	>> ~/.bashrc			
 			echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bashrc		            
 			source ~/.bashrc
-                        echo "verificando que este todo en orden"
+                        echo " Verificando que este todo en orden"
                         go version
+			echo "\033[1;33m[+]\033[m Instalacion exitosa..."
 			sleep 1
 			break
 			;;		              
