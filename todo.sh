@@ -53,8 +53,9 @@ select opcion in "${opciones[@]}"; do
                         
                   no)
                   
-                        echo "\033[1;33m[+]\033[m Instala go y vuelve a correr el script (exiten tools en el script que estan escritas en go)"
+                        echo "\e[1;33m[+]\e[0m Instala go y vuelve a correr el script (exiten tools en el script que estan escritas en go)"
 			echo "\e[1;31m[+]\e[0m Abortando la instalacion..."
+			sleep 2
 			exit 1
 			;;
 	esac	
@@ -70,7 +71,7 @@ cd ~/tools/
 # Instalacion de tools
 
 #Sublist3r
-echo "\033[1;33m[+]\033[m Instalando Sublist3r..."
+echo "\e[1;33m[+]\033[m Instalando Sublist3r..."
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r*
 sudo pip install -r requirements.txt 
@@ -78,26 +79,26 @@ cd ~/tools/
 echo -e "\e[1;33m[+]\e[0m Done"
 
 #subfinder
-echo "\033[1;33m[+]\033[m Instalando subfinder..."
+echo "\e[1;33m[+]\033[m Instalando subfinder..."
 go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
 cd ~/tools/
 echo -e "\e[1;33m[+]\e[0m Done"
 
 #aquatone
-echo "\033[1;33m[+]\033[m Instalando aquatone..."
+echo "\e[1;33m[+]\e[0m Instalando aquatone..."
 go get github.com/michenriksen/aquatone
 cd ~/tools/
 echo -e "\e[1;33m[+]\e[0m Done"
 
 #assetfinder
-echo "\033[1;33m[+]\033[m Instalando assetfinder..."
+echo "\e[1;33m[+]\e[0m Instalando assetfinder..."
 go get -u github.com/tomnomnom/assetfinder
 cd ~/tools/
 echo -e "\e[1;33m[+]\e[0m Done"
 
 
 #amass
-echo "\033[1;33m[+]\033[m Instalando Amass..."
+echo "\e[1;33m[+]\e[0m Instalando Amass..."
 sudo snap install amass
 export PATH=$PATH:/snap/bin
 echo "export PATH=$PATH:/snap/bin" >> ~/.bashrc
@@ -105,13 +106,13 @@ echo -e "\e[1;33m[+]\e[0m Done"
 
 
 #dirsearch
-echo "\033[1;33m[+]\033[m Instalando dirsearch..."
+echo "\e[1;33m[+]\e[0m Instalando dirsearch..."
 git clone https://github.com/maurosoria/dirsearch.git
 cd ~/tools/
 echo -e "\e[1;33m[+]\e[0m Done"
 
 #ffuz
-echo "\033[1;33m[+]\033[m Instalando ffuz..."
+echo "\e[1;33m[+]\e[0m Instalando ffuz..."
 go get github.com/ffuf/ffuf
 cd ~/tools/
 echo -e "\e[1;33m[+]\e[0m Done"
