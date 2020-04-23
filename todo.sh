@@ -182,6 +182,7 @@ echo "\033[1;33m[+]\033[m Instalando wordlists"
 sleep 1
 echo "\033[1;33m[+]\033[m Seclists..."
 git clone https://github.com/danielmiessler/SecLists.git
+cd ~/tools/SecLists/Discovery/DNS/
 #Este archivo corrompe massdns, se limpian las lineas que causan el problema
 cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 cd ~/wordlists/
