@@ -46,7 +46,7 @@ select opcion in "${opciones[@]}"; do
 			source ~/.bashrc
                         echo " Verificando que este todo en orden"
                         go version
-			echo "\033[1;33m[+]\033[m Instalacion exitosa..."
+			echo -e "\e[1;33m[+]\e[0m Instalacion exitosa..."
 			sleep 1
 			break
 			;;		              
@@ -54,7 +54,7 @@ select opcion in "${opciones[@]}"; do
                   no)
                   
                         echo "\033[1;33m[+]\033[m Instala go y vuelve a correr el script (exiten tools en el script que estan escritas en go)"
-			echo "\033[1;33m[+]\033[m Abortando la instalacion..."
+			echo "\e[1;31m[+]\e[0m Abortando la instalacion..."
 			exit 1
 			;;
 	esac	
@@ -75,25 +75,25 @@ git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r*
 sudo pip install -r requirements.txt 
 cd ~/tools/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 #subfinder
 echo "\033[1;33m[+]\033[m Instalando subfinder..."
 go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
 cd ~/tools/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 #aquatone
 echo "\033[1;33m[+]\033[m Instalando aquatone..."
 go get github.com/michenriksen/aquatone
 cd ~/tools/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 #assetfinder
 echo "\033[1;33m[+]\033[m Instalando assetfinder..."
 go get -u github.com/tomnomnom/assetfinder
 cd ~/tools/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 
 #amass
@@ -101,77 +101,77 @@ echo "\033[1;33m[+]\033[m Instalando Amass..."
 sudo snap install amass
 export PATH=$PATH:/snap/bin
 echo "export PATH=$PATH:/snap/bin" >> ~/.bashrc
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 
 #dirsearch
 echo "\033[1;33m[+]\033[m Instalando dirsearch..."
 git clone https://github.com/maurosoria/dirsearch.git
 cd ~/tools/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 #ffuz
 echo "\033[1;33m[+]\033[m Instalando ffuz..."
 go get github.com/ffuf/ffuf
 cd ~/tools/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 #wfuzz
-echo "\033[1;33m[+]\033[m Instalando wfuzz..."
+echo -e "\e[1;33m[+]\e[0m Instalando wfuzz..."
 pip install wfuzz
 cd ~/tools/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 #masscan
-echo "\033[1;33m[+]\033[m Instalando masscan..."
+echo -e "\e[1;33m[+]\e[0m Instalando masscan..."
 sudo apt-get install git gcc make libpcap-dev
 git clone https://github.com/robertdavidgraham/masscan
 cd masscan* 
 make -j8
 mv bin/masscan /usr/local/bin
 cd ~/tools/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 #Linkfinder
-echo "\033[1;33m[+]\033[m Instalando LinkFinder..."
+echo -e "\e[1;33m[+]\e[0m Instalando LinkFinder..."
 git clone https://github.com/GerbenJavado/LinkFinder.git
 cd LinkFinder
 pip3 install -r requirements.txt
 python setup.py install
 cd ~/tools/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 #waybackurls
-echo "\033[1;33m[+]\033[m Instalando waybackurls..."
+echo -e "\e[1;33m[+]\e[0m Instalando waybackurls..."
 go get github.com/tomnomnom/waybackurls
 cd ~/tools/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 #Arjun
-echo "\033[1;33m[+]\033[m Instalando Arjun..."
+echo -e "\e[1;33m[+]\e[0m Instalando Arjun..."
 git clone https://github.com/s0md3v/Arjun.git
 cd ~/tools/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 #nmap
-echo "\033[1;33m[+]\033[m Instalando nmap..."
+echo -e "\e[1;33m[+]\e[0m Instalando nmap..."
 sudo apt-get install -y nmap
 cd ~/tools/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 #httprobe
-echo "\033[1;33m[+]\033[m Instalando httprobe..."
+echo -e "\e[1;33m[+]\e[0m Instalando httprobe..."
 go get -u github.com/tomnomnom/httprobe 
 cd ~/tools/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 #findomain
-echo "\033[1;33m[+]\033[m Instalando findomain..."
+echo -e "\e[1;33m[+]\e[0m Instalando findomain..."
 wget https://github.com/Edu4rdSHL/findomain/releases/latest/download/findomain-linux
 mv findomain-linux findomain
 chmod +x findomain
 cd ~/tools/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 
 #wordlists
@@ -179,29 +179,29 @@ mkdir ~/wordlists
 cd ~/wordlists/
 
 #Seclist
-echo "\033[1;33m[+]\033[m Instalando wordlists"
+echo -e "\e[1;33m[+]\e[0m Instalando wordlists"
 sleep 1
-echo "\033[1;33m[+]\033[m Seclists..."
+echo -e "\e[1;33m[+]\e[0m Seclists..."
 git clone https://github.com/danielmiessler/SecLists.git
 cd ~/tools/SecLists/Discovery/DNS/
 #Este archivo corrompe massdns, se limpian las lineas que causan el problema
 cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 cd ~/wordlists/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 
 #fuzzdb
-echo "\033[1;33m[+]\033[m fuzzdb..."
+echo -e "\e[1;33m[+]\e[0m fuzzdb..."
 git clone https://github.com/fuzzdb-project/fuzzdb.git --depth 1
 cd ~/wordlists/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
 #all.txt jason haddix
-echo "\033[1;33m[+]\033[m all.txt de jhaddix..."
+echo -e "\e[1;33m[+]\e[0m all.txt de jhaddix..."
 wget https://gist.github.com/jhaddix/f64c97d0863a78454e44c2f7119c2a6a
 cd ~/wordlists/
-echo "\033[1;33m[+]\033[m Done"
+echo -e "\e[1;33m[+]\e[0m Done"
 
-echo -e "\n\n\n\n\n\n\n\n\n\n\nScript completado!"
+echo -e "\e[1;33m[+]\e[0m\n\n\n\n\n\n\n\n\n\n\nScript completado!"
 
 
