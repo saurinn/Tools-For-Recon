@@ -19,6 +19,7 @@ sudo apt-get install -y snapd
 sudo apt-get install -y libcurl4-openssl-dev
 sudo apt-get install -y libssl-dev
 sudo apt-get install -y jq
+sudo apt-get install -y pip
 sudo apt-get install -y ruby-full
 
 # Instalar golang
@@ -71,7 +72,7 @@ cd ~/tools/
 # Instalacion de tools
 
 #Sublist3r
-echo "\e[1;33m[+]\033[m Instalando Sublist3r..."
+echo -e "\e[1;33m[+]\033[m Instalando Sublist3r..."
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r*
 sudo pip install -r requirements.txt 
@@ -79,26 +80,26 @@ cd ~/tools/
 echo -e "\e[1;33m[+]\e[0m Done"
 
 #subfinder
-echo "\e[1;33m[+]\033[m Instalando subfinder..."
+echo -e "\e[1;33m[+]\033[m Instalando subfinder..."
 go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
 cd ~/tools/
 echo -e "\e[1;33m[+]\e[0m Done"
 
 #aquatone
-echo "\e[1;33m[+]\e[0m Instalando aquatone..."
+echo -e "\e[1;33m[+]\e[0m Instalando aquatone..."
 go get github.com/michenriksen/aquatone
 cd ~/tools/
 echo -e "\e[1;33m[+]\e[0m Done"
 
 #assetfinder
-echo "\e[1;33m[+]\e[0m Instalando assetfinder..."
+echo -e "\e[1;33m[+]\e[0m Instalando assetfinder..."
 go get -u github.com/tomnomnom/assetfinder
 cd ~/tools/
 echo -e "\e[1;33m[+]\e[0m Done"
 
 
 #amass
-echo "\e[1;33m[+]\e[0m Instalando Amass..."
+echo -e "\e[1;33m[+]\e[0m Instalando Amass..."
 sudo snap install amass
 export PATH=$PATH:/snap/bin
 echo "export PATH=$PATH:/snap/bin" >> ~/.bashrc
@@ -106,13 +107,13 @@ echo -e "\e[1;33m[+]\e[0m Done"
 
 
 #dirsearch
-echo "\e[1;33m[+]\e[0m Instalando dirsearch..."
+echo -e "\e[1;33m[+]\e[0m Instalando dirsearch..."
 git clone https://github.com/maurosoria/dirsearch.git
 cd ~/tools/
 echo -e "\e[1;33m[+]\e[0m Done"
 
 #ffuz
-echo "\e[1;33m[+]\e[0m Instalando ffuz..."
+echo -e "\e[1;33m[+]\e[0m Instalando ffuz..."
 go get github.com/ffuf/ffuf
 cd ~/tools/
 echo -e "\e[1;33m[+]\e[0m Done"
