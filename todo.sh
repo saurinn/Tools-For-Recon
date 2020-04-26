@@ -204,6 +204,6 @@ wget https://gist.github.com/jhaddix/f64c97d0863a78454e44c2f7119c2a6a
 cd ~/wordlists/
 echo -e "\e[1;33m[+]\e[0m Done"
 
-echo -e "\e[1;33m[+]\e[0m\n\n\n\n\n\n\n\n\n\n\nScript completado!"
+echo -e "\e[1;32m[+]\e[0m Script completado!"
 
 
