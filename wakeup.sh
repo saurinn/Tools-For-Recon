@@ -1,18 +1,28 @@
 #!/bin/bash
+#Script to automate the installation of a bug bounty box
+#Author: (manuel valdez) https://twitter.com/saur1n
 
-echo "Full update and upgrade..."
+echo -e "${RED} Wake up, Neo..."
+
+echo "Full update and upgrade of the box..."
 sudo apt-get -y update
 sudo apt-get -y upgrade
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt-get -y update
+
 
 Yellow='\033[1;33m'
-Red='\033[1;31m'
+RED='\033[0;31m'
 
+echo "Installing dependecies, libraries, etc "
 sudo apt-get install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
 sudo apt-get install -y build-essential libssl-dev libffi-dev python-dev
 sudo apt-get install -y python-setuptools
 sudo apt-get install -y libldns-dev
 sudo apt-get install -y python3-pip
 sudo apt-get install -y python-pip
+sudo apt-get install -y python3.10
 sudo apt-get install -y python-dnspython
 sudo apt-get install -y git
 sudo apt-get install -y snapd
@@ -21,6 +31,7 @@ sudo apt-get install -y libssl-dev
 sudo apt-get install -y jq
 sudo apt-get install -y pip
 sudo apt-get install -y ruby-full
+
 
 # Instalar golang
 if [[ -z "$GOPATH" ]];then
